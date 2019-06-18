@@ -4,12 +4,12 @@ using System.Text;
 
 namespace LockDemoConsole.Models
 {
-    public class Locker_Lock_01
+    /// <summary>
+    /// Only use this class on one lock
+    /// </summary>
+    internal class Locker_Lock_01
     {
-        public Locker_Lock_01()
-        {
-
-        }
+        public Locker_Lock_01() { }
 
         public int Placeholder { get; set; }
     }

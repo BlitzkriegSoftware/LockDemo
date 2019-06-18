@@ -36,6 +36,8 @@ namespace LockDemoConsole
         private static void TaskWithLock(Object ThreadNumber)
         {
             string ThreadName = "L-Thread " + ThreadNumber.ToString();
+
+            // Try not to need locking, but if you must in a static method lock on a type you own
             lock (typeof(Models.Locker_Lock_01))
             {
                 Console.WriteLine("Enter: {0}", ThreadName);
@@ -51,7 +53,6 @@ namespace LockDemoConsole
             Thread.Sleep(dice.Next(20, 160));
             Console.WriteLine("Exit: {0}", ThreadName);
         }
-
 
     }
 }
